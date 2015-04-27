@@ -1,8 +1,28 @@
 CREATE DATABASE fivestar;
 \c fivestar
 
-CREATE TABLE parties (id SERIAL PRIMARY KEY, name VARCHAR(255), count INTEGER);
+CREATE TABLE foods (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255),
+  cents INTEGER,
+  cuisine VARCHAR(255)
+);
 
-CREATE TABLE orders (id SERIAL PRIMARY KEY, party_id INTEGER, food_id INTEGER, paid BOOLEAN, total INTEGER);
+CREATE TABLE parties (
+  id SERIAL PRIMARY KEY,
+  table_number INTEGER,
+  is_paid BOOLEAN
+);
 
-CREATE TABLE foods (id SERIAL PRIMARY KEY, cost INTEGER, name VARCHAR(255));
+CREATE TABLE orders (
+  id SERIAL PRIMARY KEY,
+  party_id INTEGER,
+  food_id INTEGER
+);
+
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255),
+  password_hash VARCHAR(255)
+);
