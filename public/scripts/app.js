@@ -1,6 +1,6 @@
 //creating my namespace
 
-var app = {};
+var app = app || {};
 
 //model
 app.FoodModel = Backbone.Model.extend();
@@ -33,7 +33,7 @@ app.FoodListView = Backbone.View.extend({
     }
   }
 });
-);
+// );
 $(document).ready(function() {
 
 });

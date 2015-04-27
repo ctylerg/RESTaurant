@@ -1,9 +1,9 @@
 require 'bundler'
-Bundler.require ()
+Bundler.require()
 
 ActiveRecord::Base.establish_connection(
-    adapter => 'postgresql',
-    database => 'fivestar'
+    :adapter => 'postgresql',
+    :database => 'fivestar'
 )
 
 require './models/food'
@@ -12,11 +12,11 @@ require './models/party'
 
 
 get '/' do
-  index :erb
+  erb :index
 end
 
 
-Verb	Route	Action
+# Verb	Route	Action
 #GET	/	Displays the waitstaff's application
 
 
@@ -30,14 +30,12 @@ get '/api/foods' do
   foods.to_json
 end
 # GET	/api/foods/:id	A single food item and all the parties that included it
-get '/api/foods/:id' do
-  food = Food.find(params[:id].to_i)
-
-
-  content_type :json
-  food.to_json
-end
-###########NEEDS MORE ####################################################
+ get '/api/foods/:id' do
+   food = Food.find(params[:id].to_i)
+   content_type :json
+   food.to_json
+ end
+###########NEEDS MORE ??????####################################################
 
 # POST	/api/foods	Creates a new food item
 post '/api/foods' do
@@ -61,10 +59,11 @@ put '/api/foods/:id' do
 end
 # DELETE	/api/foods/:id	Deletes a food item
 delete '/api/foods/:id' do
-  food = Food.find(params[:id].to_i).destroy
+  food = Food.destroy(params[:id].to_i)
   content_type :json
-  {message: "86 that food"}.to_json
+  {message: "86 that food!"}.to_json
 end
+
 
 # GET	/api/parties	All parties
 get '/api/parties' do
@@ -76,12 +75,9 @@ end
 # GET	/api/parties/:id	A single party and all the orders it contains
 get '/api/parties/:id' do
   party = Party.find(params[:id].to_i)
-
-
-
-#############NEED MORE ##########################
-content_type :json
-party.to_json
+# #############NEED MORE??? ##########################
+  content_type :json
+  party.to_json
 end
 
 
@@ -107,9 +103,22 @@ end
 
 # DELETE	/api/parties/:id	Delete a party
 delete '/api/parties/:id' do
-  party = Party.find(params[:id].to_i).destroy
+  party = Party.destroy(params[:id].to_i)
   content_type :json
   {message: "86 that party"}.to_json
+end
+
+
+get '/api/orders' do
+  orders = Order.all
+  content_type :json
+  orders.to_json
+end
+
+get '/api/orders/:id' do
+  order = Order.find(params[:id].to_i)
+  content_type :json
+  order.to_json
 end
 
 # POST	/api/orders	Creates a new order
@@ -120,16 +129,26 @@ post '/api/orders' do
 end
 
 # PATCH	/api/orders/:id	Change item to no-charge
+patch '/api/order/:id' do
+  order = Order.find(params[:id].to_i)
+  order.update(params[:order])
+  content_type :json
+  order.to_json
+end
+
 #########################################################################
 # DELETE	/api/orders/:id	Removes an order
 delete '/api/orders/:id' do
-  order = Order.find(params[:id].to_i).destroy
+  order = Order.destroy(params[:id].to_i)
   content_type :json
   {message: "86 that order!"}.to_json
+end
 
 # GET	/api/parties/:id/receipt	Saves the party's receipt data to a file.
 get '/api/parties/:id/receipt' do
   party = Party.find(params[:id].to_i)
+end
+
   ############################################################
 # PATCH	/api/parties/:id/checkout	Marks the party as paid
 # PUT	/api/parties/:id/checkout	Marks the party as paid
