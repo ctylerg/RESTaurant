@@ -1,39 +1,29 @@
-//creating my namespace
-
 var app = app || {};
 
-//model
-app.FoodModel = Backbone.Model.extend();
+$(document).ready(function(){
 
 
-//template
+  app.foods = new app.FoodCollection({
+    model: app.FoodModel
+  })
 
+  app.parties = new app.PartyCollection({
+    model: app.PartyModel
+  })
 
-//modelView
+  app.foodListPainter = new app.GeneralListView({
+    modelView: app.FoodView,
+    collection: app.foods,
+    el: $('#menu-list'),
+  });
 
-// collection
+  app.partyListPainter = new app.GeneralListView({
+    modelView: app.PartyView,
+    collection: app.parties,
+    el: $('#party-list'),
+  });
 
-app.FoodList = Backbone.Collection.extend({
-  url: '/api/foods',
-  model: app.FoodModel
-});
-
-//collectionView
-
-app.FoodListView = Backbone.View.extend({
-  initialize: function() {
-    this.listenTo(this.collection, "sync", this.render);
-  },
-  render: function() {
-    var foodCount = this.collection.models.length;
-    for (var i = 0; i < foodCount.length; i++) {
-      var food = this.collection.models[i];
-      var view = new app.FoodCardView({model: model});
-      view.render();
-    }
-  }
-});
-// );
-$(document).ready(function() {
+  app.parties.fetch();
+  app.foods.fetch();
 
 });

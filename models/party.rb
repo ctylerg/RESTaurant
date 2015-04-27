@@ -1,6 +1,6 @@
-class Party <ActiveRecord::Base
-  has_many(:orders)
-  has_many(:foods)
-  def to_s
-  end
+
+
+class Party < ActiveRecord::Base
+  has_many :foods, :through => :orders
+  has_many :orders
 end

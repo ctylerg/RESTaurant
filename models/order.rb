@@ -1,6 +1,6 @@
-class Order <ActiveRecord::Base
-  belongs_to(:foods)
-  belongs_to(:parties)
-  def to_s
-  end
+
+
+class Order < ActiveRecord::Base
+  belongs_to :food
+  belongs_to :party
 end
