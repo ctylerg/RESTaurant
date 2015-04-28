@@ -54,7 +54,7 @@ class FoodsController < Sinatra::Base
   end
 
   delete '/:id' do
-    authenticate_api!
+
      Food.destroy(params[:id])
      content_type :json
      {success: "ok"}.to_json

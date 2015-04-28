@@ -55,12 +55,6 @@ class OrdersController < Sinatra::Base
      content_type :json
      {success: "ok"}.to_json
   end
-  #####################
-  patch '/:id' do
-    order = Order.find(params[:id])
-    oder.update(order_params)
-    content_type :json
-    order.to_json
-  end
+
 
 end
