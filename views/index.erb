@@ -3,12 +3,33 @@
     <title>RESTaurant</title>
     <link rel="stylesheet" href="/style/main.css">
 
-    <script type="text/javascript" src="/scripts/jquery.js"></script>
-    <script type="text/javascript" src="/scripts/underscore.js"></script>
-    <script type="text/javascript" src="/scripts/backbone.js"></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
+
   </head>
   <body>
 Come to My RESTaurant because it is very good?
-  </body>
+
+    <ul class='interface-list' id='menu-list'>
+    </ul>
+    <ul class='interface-list' id='party-list'>
+    </ul>
+
+
+    <script type="text/javascript" src="/scripts/jquery.js"></script>
+    <script type="text/javascript" src="/scripts/underscore.js"></script>
+    <script type="text/javascript" src="/scripts/backbone.js"></script>
+<!-- ****** Backbone Models ****** -->
+   <script src='/scripts/models/FoodModel.js'></script>
+   <script src='/scripts/models/PartyModel.js'></script>
+
+   <!-- ****** Backbone Collection ****** -->
+   <script src='/scripts/collections/FoodCollection.js'></script>
+   <script src='/scripts/collections/PartyCollection.js'></script>
+
+   <!-- ****** Backbone Views ****** -->
+   <script src='/scripts/views/FoodView.js'></script>
+   <script src='/scripts/views/PartyView.js'></script>
+   <script src='/scripts/views/GeneralListView.js'></script>
+   <script type="text/javascript" src="/scripts/app.js"></script>
+
+</body>
 </html>
