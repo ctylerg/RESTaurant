@@ -30,6 +30,7 @@ class OrdersController < Sinatra::Base
   end
 
   post '/' do
+    order_params = params
     order = Order.create(order_params)
     content_type :json
     order.to_json
@@ -53,6 +54,13 @@ class OrdersController < Sinatra::Base
      Order.destroy(params[:id])
      content_type :json
      {success: "ok"}.to_json
+  end
+  #####################
+  patch '/:id' do
+    order = Order.find(params[:id])
+    oder.update(order_params)
+    content_type :json
+    order.to_json
   end
 
 end

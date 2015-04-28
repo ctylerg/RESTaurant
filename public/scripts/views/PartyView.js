@@ -1,3 +1,7 @@
+
+
+
+
 var app = app || {};
 
 app.PartyView = Backbone.View.extend({
@@ -5,7 +9,7 @@ app.PartyView = Backbone.View.extend({
     this.listenTo(this.model,'change', this.render);
     this.listenTo(this.model,'delete', this.remove);
   },
-  template: _.template('<h3><%= table_number %><button class="select-party">Select</button>'),
+  template: _.template('<h3><%= table_number %><button class="select-party">Pick</button>'),
   tagName: 'li',
   className: 'party',
   render: function(){
