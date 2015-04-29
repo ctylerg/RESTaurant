@@ -32,6 +32,11 @@ class FoodsController < Sinatra::Base
 
   post '/' do
     authenticate_api!
+    puts ""
+    puts ""
+    puts params
+    puts ""
+    puts ""
     food = Food.create(food_params)
     content_type :json
     food.to_json
@@ -54,7 +59,7 @@ class FoodsController < Sinatra::Base
   end
 
   delete '/:id' do
-
+     authenticate_api!
      Food.destroy(params[:id])
      content_type :json
      {success: "ok"}.to_json

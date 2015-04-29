@@ -2,25 +2,38 @@
   <head>
     <title>RESTaurant</title>
     <link rel="stylesheet" href="/style/main.css">
-    <script type="text/javascript" src="/scripts/jquery.js"></script>
-    <script type="text/javascript" src="/scripts/underscore.js"></script>
-    <script type="text/javascript" src="/scripts/backbone.js"></script>
-    <!-- ****** Backbone Models ****** -->
-    <script src='/scripts/models/FoodModel.js'></script>
-    <script src='/scripts/models/PartyModel.js'></script>
 
-    <!-- ****** Backbone Collection ****** -->
-    <script src='/scripts/collections/FoodCollection.js'></script>
-    <script src='/scripts/collections/PartyCollection.js'></script>
+    <script type="text/template" id="click-template">
+    <p><%%= message %></p>
+    <p><button id="click-me"><%%= buttonMessage %></button></p>
+  </script>
 
-    <!-- ****** Backbone Views ****** -->
-    <script src='/scripts/views/FoodView.js'></script>
-    <script src='/scripts/views/PartyView.js'></script>
-    <script src='/scripts/views/GeneralListView.js'></script>
-    <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/template" id="form-template">
+      <input type='text' id='name' placeholder='Enter a food name'>
+      <input type='text' id='cents' placeholder='Enter cents'>
+      <input type='text' id='cuisine' placeholder='Enter the cuisine'>
+      <button id='submit'><%%= submitValue %></button>
+  </script>
 
   </head>
   <body>
+  <script type="text/javascript" src="/scripts/jquery.js"></script>
+  <script type="text/javascript" src="/scripts/underscore.js"></script>
+  <script type="text/javascript" src="/scripts/backbone.js"></script>
+  <!-- ****** Backbone Models ****** -->
+  <script src='/scripts/models/FoodModel.js'></script>
+  <script src='/scripts/models/PartyModel.js'></script>
+
+  <!-- ****** Backbone Collection ****** -->
+  <script src='/scripts/collections/FoodCollection.js'></script>
+  <script src='/scripts/collections/PartyCollection.js'></script>
+
+  <!-- ****** Backbone Views ****** -->
+  <script src='/scripts/views/FoodView.js'></script>
+  <script src='/scripts/views/PartyView.js'></script>
+  <script src='/scripts/views/GeneralListView.js'></script>
+  <script src='/scripts/views/FormView.js'></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
     <nav>
       NAVIGATION BAR <a href='/admin'>Admin</a>
     </nav>
@@ -37,6 +50,10 @@ Come to My RESTaurant because it is very good?
 
 
    <button id='place-order'>Place Order</button>
+<div id="box"></div>
+<div id="box2"></div>
+<div id="box3"></div>
+<div id="box4"></div>
 
 </body>
 </html>

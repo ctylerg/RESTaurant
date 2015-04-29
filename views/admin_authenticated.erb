@@ -1,5 +1,17 @@
 <html>
   <head>
+    <script type="text/template" id="click-template">
+    <p><%%= message %></p>
+    <p><button id="click-me"><%%= buttonMessage %></button></p>
+  </script>
+
+  <script type="text/template" id="form-template">
+      <input type='text' id='name' placeholder='Enter a food name'>
+      <input type='text' id='cents' placeholder='Enter cents'>
+      <input type='text' id='cuisine' placeholder='Enter the cuisine'>
+      <button id='submit'><%%= submitValue %></button>
+  </script>
+
     <title>RESTaurant</title>
     <link rel="stylesheet" href="/style/main.css">
   </head>
@@ -14,9 +26,9 @@
 
 
     <!-- ****** JS Libraries ****** -->
-    <script src='/scripts/lib/jquery.js'></script>
-    <script src='/scripts/lib/underscore.js'></script>
-    <script src='/scripts/lib/backbone.js'></script>
+    <script src='/scripts/jquery.js'></script>
+    <script src='/scripts/underscore.js'></script>
+    <script src='/scripts/backbone.js'></script>
 
     <!-- ****** Backbone Models ****** -->
     <script src='/scripts/models/FoodModel.js'></script>
@@ -26,6 +38,10 @@
 
     <!-- ****** Application ****** -->
     <script src='/scripts/adminApp.js'></script>
+    <script src='/scripts/views/FormView.js'></script>
+
+    <button id='add-food'>Add Item</button>
+
 
   </body>
 </html>

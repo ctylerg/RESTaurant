@@ -1,13 +1,46 @@
 body{
   background-color: lightblue;
+  margin: 0;
 }
 
 nav {
   background-color: red;
-  position: absolute;
+  position: static;
+  height: 5%;
   width: 100%;
 }
 
+#box{
+  background-color: blue;
+  height: 45%;
+  width: 45%;
+  position: relative;
+  float: left;
+}
+
+#box2{
+  background-color: purple;
+  height: 45%;
+  width: 45%;
+  position: relative;
+  float: left;
+}
+
+#box3{
+  background-color: pink;
+  height: 45%;
+  width: 45%;
+  position: relative;
+  float: left;
+}
+
+#box4{
+  background-color: green;
+  height: 45%;
+  width: 45%;
+  position: relative;
+  float: left;
+}
 
 .food-selected{
   background-color: lightgray;

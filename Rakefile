@@ -16,9 +16,7 @@ require './models/user'
 
 
 
-namespace :db do |variable|
-
-end
+namespace :db do
 
   desc "Create Admin User"
   task :create_user do
