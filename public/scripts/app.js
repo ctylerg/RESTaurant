@@ -39,8 +39,10 @@ $(document).ready(function(){
       data: obj,
       url: '/api/orders',
       success: function() {
-        $('#place-order').text('Order Placed');
+        app.parties.fetch( {reset: true} ); // Reset the party list... update all data
 
+       $('.food-selected').removeClass('food-selected');  // remove selected class for style
+       $('.party-selected').removeClass('party-selected');  // remove selected class for style
       }
     });
 
