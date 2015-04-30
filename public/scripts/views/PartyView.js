@@ -15,6 +15,7 @@ app.PartyView = Backbone.View.extend({
   render: function(){
     this.$el.append( this.template( this.model.attributes ) );
     this.renderFoodList();
+    this.$el.append( $('<h4>').text( 'total: ' + this.model.get('total') ) );
     return this;
   },
   renderFoodList: function(){

@@ -9,3 +9,6 @@ gem 'bcrypt'
  #Utility
  gem 'json'
  gem 'rake'
+
+
+gem 'pry'

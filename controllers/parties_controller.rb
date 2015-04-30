@@ -21,7 +21,7 @@ class PartiesController < Sinatra::Base
   get '/' do
     parties = Party.all
     content_type :json
-    parties.to_json(include: :foods)
+    parties.to_json(include: :foods, methods: :total )
   end
 
   get '/:id' do
