@@ -17,42 +17,60 @@ h3 {
   color: white;
 }
 
+nav {
+  background-color: grey;
+  position: static;
+  height: 5%;
+  width: 100%;
+
+  font-size: 22px;
+  text-align: -webkit-center;
+
+}
+
+#home {
+  float: center;
+  position: relative;
+  margin-right: 25px;
+  height: 100%;
+  width: 10%;
+  font-size: 75%;
+}
+
 #admin {
-  float: right;
+  float: center;
+  position: relative;
+  margin-right: 25px;
   height: 100%;
   width: 10%;
   font-size: 75%;
 }
 
 #chef {
-  float: right;
+  float: center;
+  position: relative;
+  margin-right: 20px;
   height: 100%;
   width: 10%;
   font-size: 75%;
 }
 
 #awards {
-  float: right;
+  float: center;
+  position: relative;
   height: 100%;
   width: 10%;
   font-size: 75%;
 }
 
-#champ {
+.champ {
   font-size: 40px;
   color: white;
   text-align: center;
+  margin-top: 5%;
+  margin-left: 35%;
 }
 
-nav {
-  background-color: grey;
-  position: static;
-  height: 5%;
-  width: 100%;
-  font-size: 22px;
-  text-align: -webkit-center;
-
-}
 
 
 .food-selected{
@@ -69,8 +87,18 @@ li {
 .interface-list{
   color: white;
   border: 1px solid rgb(168, 166, 166);
-  display: inline-block;
-  width: 15%;
+  display: block;
+  float: left;
+  height: 1075px;
+  width: 20%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#fine-print {
+  color: white;
+  margin-top:70%;
+  clear: both;
 }
 
 /*
