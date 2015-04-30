@@ -1,55 +1,37 @@
 body{
-  background-color: lightblue;
+  background-image: url("http://www.wallpapersonview.com/wallpapers/4/abstract_colorful_textures_widescreen_desktop_background_picture-248.jpg");
   margin: 0;
 }
 
+h1 {
+  font-family: 'Lobster', cursive;
+  color: white;
+}
+
+#admin {
+  float: right;
+  height: 100%;
+}
+
 nav {
-  background-color: red;
+  background-color: grey;
   position: static;
   height: 5%;
   width: 100%;
 }
 
-#box{
-  background-color: blue;
-  height: 45%;
-  width: 45%;
-  position: relative;
-  float: left;
-}
-
-#box2{
-  background-color: purple;
-  height: 45%;
-  width: 45%;
-  position: relative;
-  float: left;
-}
-
-#box3{
-  background-color: pink;
-  height: 45%;
-  width: 45%;
-  position: relative;
-  float: left;
-}
-
-#box4{
-  background-color: green;
-  height: 45%;
-  width: 45%;
-  position: relative;
-  float: left;
-}
 
 .food-selected{
   background-color: lightgray;
+
 }
 .party-selected{
   background-color: orange;
 }
 
 .interface-list{
+  color: white;
+  border: 1px solid rgb(168, 166, 166);
   display: inline-block;
-  border: 1px solid black;
+  width: 15%;
 }

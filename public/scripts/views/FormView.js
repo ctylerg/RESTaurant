@@ -53,7 +53,6 @@ app.FormView = Backbone.View.extend({
     submitModel.attributes = options;
     submitModel.save();
 
-    //app.m.create(options);
   }
 });
 
