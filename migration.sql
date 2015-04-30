@@ -5,7 +5,8 @@ CREATE TABLE foods (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   cents INTEGER,
-  cuisine VARCHAR(255)
+  cuisine VARCHAR(255),
+  free BOOLEAN
 );
 
 CREATE TABLE parties (

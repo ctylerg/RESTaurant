@@ -32,11 +32,6 @@ class FoodsController < Sinatra::Base
 
   post '/' do
     authenticate_api!
-    puts ""
-    puts ""
-    puts params
-    puts ""
-    puts ""
     food = Food.create(food_params)
     content_type :json
     food.to_json

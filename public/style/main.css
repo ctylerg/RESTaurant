@@ -8,9 +8,20 @@ h1 {
   color: white;
 }
 
+h2 {
+  font-family: 'Lobster', cursive;
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
 #admin {
   float: right;
   height: 100%;
+  width: 10%;
+  font-size: 75%;
 }
 
 nav {
@@ -18,6 +29,9 @@ nav {
   position: static;
   height: 5%;
   width: 100%;
+  font-size: 22px;
+  text-align: -webkit-center;
+
 }
 
 
@@ -29,6 +43,9 @@ nav {
   background-color: orange;
 }
 
+li {
+  border: 10px green;
+}
 .interface-list{
   color: white;
   border: 1px solid rgb(168, 166, 166);

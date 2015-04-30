@@ -12,17 +12,34 @@
       <button id='submit'><%%= submitValue %></button>
   </script>
 
+
+  <script type="text/template" id="click-comp-template">
+  <p><%%= message %></p>
+  <p><button id="click-me-comp"><%%= buttonMessage %></button></p>
+</script>
+
+
+  <script type="text/template" id="comp-template">
+      <input type='text' id='food_name' placeholder='Enter a food name'>
+      <input type='text' id='food_cents' placeholder='Enter cents'>
+      <input type='text' id='food_free' placeholder='Enter comp'>
+      <button id='submit_comp'><%%= submitValue %></button>
+  </script>
+
+
+
     <title>RESTaurant</title>
     <link rel="stylesheet" href="/style/main.css">
   </head>
   <body>
-    <a href='/'>Home</a>
-    <h2>Hello Manager</h2>
+    <h1>Welcome to the Guac Shop!</h1>
+    <h2>We have the Guac to rocks your socks</h2>
+    <nav>
+      GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC GUAC<button id='admin'><a href='/'>Home</a></button>
+    </nav>
 
-    <form action="/sessions" method='post'>
-      <input type="hidden" name='_method' value='delete'>
-      <input type="submit" value='log-out'>
-    </form>
+    <h3>Hello Manager</h3>
+
 
 
     <!-- ****** JS Libraries ****** -->
@@ -39,6 +56,12 @@
     <!-- ****** Application ****** -->
     <script src='/scripts/adminApp.js'></script>
     <script src='/scripts/views/FormView.js'></script>
+
+
+    <form action="/sessions" method='post'>
+      <input type="hidden" name='_method' value='delete'>
+      <input type="submit" value='log-out'>
+    </form>
 
 
 

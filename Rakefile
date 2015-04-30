@@ -36,7 +36,8 @@ namespace :db do
       Food.create({
           name: ( foods_starting.sample + ' ' + food_ending.sample),
           cents: rand(500..1500),
-          cuisine: cuisines.sample
+          cuisine: cuisines.sample,
+          free: false
       })
     end
 
