@@ -12,7 +12,8 @@ CREATE TABLE foods (
 CREATE TABLE parties (
   id SERIAL PRIMARY KEY,
   table_number INTEGER,
-  is_paid BOOLEAN
+  is_paid BOOLEAN,
+  cents INTEGER
 );
 
 CREATE TABLE orders (

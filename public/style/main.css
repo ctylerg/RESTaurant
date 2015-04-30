@@ -24,6 +24,26 @@ h3 {
   font-size: 75%;
 }
 
+#chef {
+  float: right;
+  height: 100%;
+  width: 10%;
+  font-size: 75%;
+}
+
+#awards {
+  float: right;
+  height: 100%;
+  width: 10%;
+  font-size: 75%;
+}
+
+#champ {
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
 nav {
   background-color: grey;
   position: static;
@@ -52,3 +72,10 @@ li {
   display: inline-block;
   width: 15%;
 }
+
+/*
+<480px (which applies to older, smaller smartphone screen sizes)
+
+<768px, which is ideal for larger smartphones and smaller tablets
+
+>768px, which applies for everything bigger such as large tablet screens and desktops screens.*/

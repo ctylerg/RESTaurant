@@ -29,20 +29,20 @@ namespace :db do
   task :junk_data do
 
     # Generate random Food
-    foods_starting = ['Chicken', 'Veggie', 'Beef', 'Rice']
-    food_ending = ['Salad', 'Soup', 'Plate', 'Bowl']
-    cuisines = ['Lite', 'Homecooking', 'Party', 'Bar Food']
-    rand(5..15).times do
-      Food.create({
-          name: ( foods_starting.sample + ' ' + food_ending.sample),
-          cents: rand(500..1500),
-          cuisine: cuisines.sample,
-          free: false
-      })
-    end
+    #  foods_starting = ['Veggie', 'Spicy', 'Rice']
+    #  food_ending = ['Guacamole']
+    # cuisines = ['Lite', 'Homecooking', 'Party', 'Bar Food']
+    # rand(5..15).times do
+    #   Food.create({
+    #       name: ( foods_starting.sample + ' ' + food_ending.sample),
+    #       cents: rand(500..1500),
+    #       cuisine: cuisines.sample,
+    #       free: false
+    #   })
+    # end
 
     # Generate random Parties
-    rand(5..15).times do |num|
+    rand(5..10).times do |num|
       Party.create({
         table_number: num,
         is_paid: [true, false, false].sample
@@ -51,13 +51,13 @@ namespace :db do
 
     # Generate random Orders
     parties = Party.all
-    foods = Food.all
+    #foods = Food.all
     rand(10..35).times do |num|
-      Order.create({
-        party: parties.sample,
-        food: foods.sample
-      })
-    end
+       Order.create({
+         party: parties.sample,
+    #     food: foods.sample
+       })
+     end
 
   end # task :junk_data
 

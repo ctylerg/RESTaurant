@@ -79,7 +79,7 @@ app.FormTwoView = Backbone.View.extend({
     $('body').append(this.$el);
   },
   submit: function() {
-    console.log("Your is about to be comped");
+    console.log("Your food is about to be comped");
     var options = {
       name: $('#food_name').val(),
       cents: $('#food_cents').val(),
@@ -89,9 +89,9 @@ app.FormTwoView = Backbone.View.extend({
 
 
     var submitModel = new Backbone.Model();
-    submitModel.url = '/api/foods';
+    submitModel.url = '/api/parties';
     submitModel.attributes = options;
-    submitModel.save();
+    submitModel.destroy();
   }
 });
 

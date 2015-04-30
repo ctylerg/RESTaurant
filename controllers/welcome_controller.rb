@@ -16,6 +16,14 @@ class WelcomeController < Sinatra::Base
     erb :index
   end
 
+  get '/awards' do
+    erb :awards
+  end
+
+  get '/chef' do
+    erb :chef
+  end
+
   get '/admin' do
     if current_user
       erb :admin_authenticated
